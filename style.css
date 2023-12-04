@@ -1,13 +1,44 @@
 body{
+    background-color: rgba(0, 0, 0, 0.559);
+    
+}
+nav{
+    display: block;
+    position: absolute;
+    width: 105%;
+    top: 0;
+    left: -1%;
+    overflow-x: hidden;
     background-color: black;
+
+}
+nav ul{
+    color: wheat;
+    display: flex;
+    height: 3em;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    flex-direction: row;
+    list-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav ul li{
+    padding-right: 15px;
+}
+nav ul li:hover{
+    font-size: larger;
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
 }
 .main-text{
     color: white;
-    width: 25vw;
+    width: 5vw;
     text-decoration: underline;
 }
-img{
-}
+
 .center-items{
     display: flex;
     justify-content: center;
@@ -19,19 +50,19 @@ img{
     justify-content: center;
     height: 38vh;
     background-color: white;
+    background-image: url(program.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
-.back-image img{
-    width: 70%;
-    height: 250px;
-    object-fit: cover
-}
+
 .circle-image{
     background-color: inherit;
-    width: 300px;
-    height: 300px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 100px;
+    min-height: 100px;
     border-radius: 50%;
-    position: absolute;
-    top:20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,29 +74,32 @@ img{
     border-radius: 50%;
 }
 .container{
-    margin-top: 17vh;
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
 
 }
 .container div{
     
-    width: 30vw;
-    height:56vh;
+    width: 40vw;
+    height:50vh;
     border: 2px solid black;
     margin: 10px;
     display: flex;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.549);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    text-decoration: underline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .primary-btn{
-    width: 24vw;
-    height: 35px;
-    display: flex;
-    justify-content: space-evenly;
+    width: 80px;
+    height: 35px; 
+    text-decoration: none;
 
 }
 .primary-btn a:hover{
@@ -95,7 +129,7 @@ img{
 .contact{
     margin-top: 15vh;
     background-color: white;
-    height: 60vh;
+    height: auto;
     width: 100%;
 
 }
@@ -147,14 +181,16 @@ width: 18em;
 }
 .skill-block{
     color: white;
-    height: 35vh;
+    height: auto;
+    font-size: 1.7vw;
     align-items: center;
+    flex-wrap: wrap;
 }
 .mager div{
-    width: 15em;
-    height: 9em;
+    width: 20vw;
+    height: 10em;
     margin: 10px;
-    border: solid white 2px;
+    border: solid rgb(255, 255, 255) 2px;
 }
 .mager{
     width: 100%;
@@ -162,6 +198,7 @@ width: 18em;
 }
 .about-block{
     color: white;
+    margin: 34px;
 
 }
 .about-block p{
@@ -171,4 +208,44 @@ width: 18em;
 }
 .quote{
     font-size: 35px;
+}
+.welcome{
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 11vh;
+    
+}
+.profile-text{
+    flex-direction: column;
+    width: 42vw;
+    font-size: xx-large;
+}
+.profile-text h1{
+    font-size: 6vw;
+    width: 20vw;
+    
+}
+.decorator{
+    background-color: rgba(222, 184, 135, 0.145);
+    width: 100%;
+    top: 40%;
+    height: 30vh;
+    display:block ;
+    position: absolute;
+    transform:rotate(29deg);
+    border-radius: 45px;
+}
+.decorator1{
+    background-color: rgba(222, 184, 135, 0.145);
+    width: 100%;
+    top: 180%;
+    height: 30vh;
+    display:block ;
+    position: absolute;
+    transform:rotate(-59deg);
+    border-radius: 45px;
 }

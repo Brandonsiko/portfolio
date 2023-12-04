@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Inventory Management System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Dashboard.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a asp-area="" asp-controller="Home" asp-action="Index"><img src=" /images/medical-logo-png-878.png" class="logo"/>Inventory Dashboard</a></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Home</i>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="InventoryItems" asp-action="Index">Theater</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="InventoryItems" asp-action="Index">Theater</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="MainStores" asp-action="Index">Main</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Operations" asp-action="Index">Operation</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Reciept">Reciept</a>
+                </li>
+                
+            </ul>
+
+            <ul class="">
+             
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="mk">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left">|||</i>
+                    </button>
+                   
+                    
+                    <ul class="CTAs">
+                        <!-- partial name="_LoginPartial" /-->
+                    </ul>
+
+                   
+                </div>
+            </nav>
+            <div class="container main-container">
+                <br/>
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                    <br />
+                </main>
+            </div>
+
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2023 - Dashboard - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            @await RenderSectionAsync("Scripts", required: false)
+        </div>
+    </div>
+
+</body>
+</html>
