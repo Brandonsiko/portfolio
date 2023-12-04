@@ -1,0 +1,187 @@
+﻿@model IEnumerable<Dashboard.Models.InventoryItems>
+@{
+    ViewData["Title"] = "Home Page";
+    int n = 0;
+    int the_days=0;
+    String Message="Items Sufficent";
+    List<string> hv= new List<string>();
+    List<int> numbers = new List<int>();
+    foreach (var item in Model)
+            {
+                hv.Add(item.name);
+                numbers.Add(item.amount);
+            }
+}
+
+<div class="text-center" id="">
+    
+    <div class="align-hor">
+        <h4>Dashboard</h4>
+        <form asp-action="ShowFilteredResults">
+            <label for="SearchName">Search</label>
+            <input value="" name="SearchName" />
+            <input class="btn btn-primary" type="submit"  value="Search" />
+        </form>
+       
+    </div>
+
+    <hr />
+    <div id="block-items">
+        <div id="low-items">
+            <img src="~/images/checking-item.png"/>
+            <label>Items low</label>
+            <h5>
+                @foreach (var item in Model)
+                {
+                    if( item.amount < 500){ n++}; 
+                }
+                <strong>@n</strong>
+            </h5>
+        </div>
+
+        <div id="booked-operations">
+            <img src="~/images/checking-item.png" />
+            <label>Operations today</label>
+            @{
+                List<Operation> mk = ViewBag.List;
+
+                foreach(var k in mk){
+                    if (k.Booked.Date.Day == DateTime.Now.Date.Day)
+                    {
+                        the_days = the_days + 1;
+                    }
+                }
+            }
+            <strong>@the_days</strong>
+        </div>
+
+        <div id="patients">
+                <img src="~/images/patient.png" />
+                <label>Today's patience</label>
+            <strong>12</strong>
+        </div>
+
+        <div id="stock">
+            <img src="~/images/checking-item.png"/>
+            <label>Stock room </label>
+            <strong>12</strong>
+        </div>
+
+    </div>
+   <br/>
+   <br/>
+
+    <div class="align-content-center jj">
+        <div>
+            <label>Inventory Items</label>
+            <canvas id="myChart" />
+        </div>
+       <div>
+            <canvas id="pieChart" />
+       </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ar = @Html.Raw(Json.Serialize(hv));
+        var nums = @Html.Raw(Json.Serialize(numbers));
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels:  ar
+            ,
+                datasets: [{
+                    label: 'stock',
+                    data: nums,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+           
+        const cc = document.getElementById('pieChart');
+
+        new Chart(cc, {
+            type: 'pie',
+            data: {
+                labels: ["used","available","operations"]
+                ,
+                datasets: [{
+                    label: 'stock',
+                    data: [34,76,56],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+
+
+    <br/>
+    <hr/>
+    <br/>
+
+    <h3><u>Dashboard Table.</u></h3>
+    <table class="table table-bordered black-table-border">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model=> model.name)
+                </th>
+               
+                <th>
+                    @Html.DisplayNameFor(model => model.amount)
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>               
+                <td>
+                        @if (item.amount > 200)
+                        {
+                            @Message
+                        }else{
+                           <label class="text-warning">
+                                Stock item 
+                           </label>
+                        }
+                </td>
+             
+            </tr>
+        }
+        </tbody>
+        
+
+    </table>
+
+    
+</div>

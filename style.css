@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     background-color: black;
 }
 .main-text{
@@ -8,6 +9,48 @@ body{
 }
 img{
 }
+=======
+    background-color: rgba(0, 0, 0, 0.559);
+    
+}
+nav{
+    display: block;
+    position: absolute;
+    width: 105%;
+    top: 0;
+    left: -1%;
+    overflow-x: hidden;
+    background-color: black;
+
+}
+nav ul{
+    color: wheat;
+    display: flex;
+    height: 3em;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    flex-direction: row;
+    list-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav ul li{
+    padding-right: 15px;
+}
+nav ul li:hover{
+    font-size: larger;
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+.main-text{
+    color: white;
+    width: 5vw;
+    text-decoration: underline;
+}
+
+>>>>>>> main
 .center-items{
     display: flex;
     justify-content: center;
@@ -19,6 +62,7 @@ img{
     justify-content: center;
     height: 38vh;
     background-color: white;
+<<<<<<< HEAD
 }
 .back-image img{
     width: 70%;
@@ -32,6 +76,21 @@ img{
     border-radius: 50%;
     position: absolute;
     top:20%;
+=======
+    background-image: url(program.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.circle-image{
+    background-color: inherit;
+    width: 30vw;
+    height: 30vw;
+    max-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+>>>>>>> main
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,13 +102,23 @@ img{
     border-radius: 50%;
 }
 .container{
+<<<<<<< HEAD
     margin-top: 17vh;
     display: flex;
     justify-content: center;
+=======
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+>>>>>>> main
 
 }
 .container div{
     
+<<<<<<< HEAD
     width: 30vw;
     height:56vh;
     border: 2px solid black;
@@ -66,6 +135,24 @@ img{
     height: 35px;
     display: flex;
     justify-content: space-evenly;
+=======
+    width: 40vw;
+    height:50vh;
+    border: 2px solid black;
+    margin: 10px;
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.549);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: underline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.primary-btn{
+    width: 80px;
+    height: 35px; 
+    text-decoration: none;
+>>>>>>> main
 
 }
 .primary-btn a:hover{
@@ -95,7 +182,11 @@ img{
 .contact{
     margin-top: 15vh;
     background-color: white;
+<<<<<<< HEAD
     height: 60vh;
+=======
+    height: auto;
+>>>>>>> main
     width: 100%;
 
 }
@@ -147,6 +238,7 @@ width: 18em;
 }
 .skill-block{
     color: white;
+<<<<<<< HEAD
     height: 35vh;
     align-items: center;
 }
@@ -155,6 +247,18 @@ width: 18em;
     height: 9em;
     margin: 10px;
     border: solid white 2px;
+=======
+    height: auto;
+    font-size: 1.7vw;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mager div{
+    width: 20vw;
+    height: 10em;
+    margin: 10px;
+    border: solid rgb(255, 255, 255) 2px;
+>>>>>>> main
 }
 .mager{
     width: 100%;
@@ -162,6 +266,10 @@ width: 18em;
 }
 .about-block{
     color: white;
+<<<<<<< HEAD
+=======
+    margin: 34px;
+>>>>>>> main
 
 }
 .about-block p{
@@ -171,4 +279,47 @@ width: 18em;
 }
 .quote{
     font-size: 35px;
+<<<<<<< HEAD
+=======
+}
+.welcome{
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 11vh;
+    
+}
+.profile-text{
+    flex-direction: column;
+    width: 42vw;
+    font-size: xx-large;
+}
+.profile-text h1{
+    font-size: 6vw;
+    width: 20vw;
+    
+}
+.decorator{
+    background-color: rgba(222, 184, 135, 0.145);
+    width: 100%;
+    top: 40%;
+    height: 30vh;
+    display:block ;
+    position: absolute;
+    transform:rotate(29deg);
+    border-radius: 45px;
+}
+.decorator1{
+    background-color: rgba(222, 184, 135, 0.145);
+    width: 100%;
+    top: 180%;
+    height: 30vh;
+    display:block ;
+    position: absolute;
+    transform:rotate(-59deg);
+    border-radius: 45px;
+>>>>>>> main
 }

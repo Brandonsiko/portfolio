@@ -1,0 +1,57 @@
+﻿@model Dashboard.Models.InventoryItems
+
+@{
+    ViewData["Title"] = "Reciept";
+}
+<h3><img src="~/images/medical-logo-png-878.png" alt"logo" class ="logo"/>Real Hospital</h3>
+
+
+<div id="reciept">
+    <h5>Receipt</h5>
+    <br/>
+        <div class="reciept-evenly">
+            <ul>
+            <li>Date <label>@DateTime.Now</label></li>
+            <li>Invoice Number  <strong>12003</strong></li>
+            </ul>
+            <ul>
+                <li>Bantume Street</li>
+                <li>102 Rivonia </li>
+                <li>Real Hospital</li>
+                <li>(+27) 84 000 0000</li>
+                <li>Cape Town</li>
+            </ul>
+        </div>
+        <br/>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>Personel</th>
+                    <th>Quantity</th>
+                    <th>Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Thandeka Smith</td>
+                    <td>Snr Nurse</td>
+                    <td>300 units</td>
+                    <td>Linen</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br/>
+        <div >
+            <label>Thank you :)</label>
+        </div>
+        
+    <h4></h4>
+    <hr />
+    
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
